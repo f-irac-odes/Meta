@@ -23,7 +23,7 @@
   texture.wrapT = THREE.RepeatWrapping;
   texture.repeat.set( 16, 16 ); 
 
-  let texture1 = new THREE.TextureLoader().load('./src/lib/components/texture.png')
+  let texture1 = new THREE.TextureLoader().load('./lib/components/texture.png')
   texture1.wrapS = THREE.RepeatWrapping ; 
   texture1.wrapT = THREE.RepeatWrapping;
   texture1.repeat.set( 3, 3 )
