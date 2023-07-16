@@ -5,6 +5,7 @@
 	import Player from './Player.svelte';
 	import { AutoColliders } from '@threlte/rapier';
   import * as THREE from 'three'
+  import {writable} from'svelte/store'
 	import CustomRenderer from './CustomRenderer.svelte';
 	import { scale } from 'svelte/transition';
 	import Grass from './Grass.svelte';
@@ -12,10 +13,10 @@
 	import Fence from './Fence.svelte';
 	import Spikes from './Spikes.svelte';
 
-  let x = writable 
-  let y, 
-  let z;
-  let position = ;
+  let x = 0;
+  let y = 0; 
+  let z = 0;
+  let position = [x, y, z];
 
   let plane;
   let playerMesh;
@@ -33,7 +34,7 @@
   });
 
 </script>
-<T is={camera} makeDefault position={[position[0], position[1], position[2]]}>
+<T is={camera} makeDefault position={$[position[0], position[1] + 5, position[2]]}>
   <OrbitControls
     enableZoom={true}
     enablePan
